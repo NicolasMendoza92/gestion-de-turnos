@@ -2,32 +2,26 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+html {
+  scroll-behavior: smooth;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+
+input {
+  @apply w-full border border-gray-200 py-2 px-6 rounded-md;
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+table.basic{
+  @apply w-full rounded-sm shadow-md my-3;
 }
-
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+table.basic thead tr td,
+table.basic thead tr th
+{
+  @apply text-xs text-white bg-primary uppercase border border-gray-200 border-gray-200 px-1 ;
+}
+table.basic tr td{
+  @apply px-1  border border-gray-200;
+}
+table.basic a{
+  @apply px-1 rounded-sm inline-flex items-center gap-1 text-xs;
 }
