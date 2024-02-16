@@ -176,7 +176,7 @@ export default function ReservaForm() {
                     <option value="19:00 a 20:00">19:00 a 20:00</option>
                     <option value="20:00 a 21:00">20:00 a 21:00</option>
                 </select>
-                <button className="bg-primary text-white text-center w-full py-4 px-4 flex gap-3 items-center justify-center rounded-md">
+                <button className="bg-primary text-white text-center w-full py-4 px-4 flex gap-3 items-center justify-center rounded-md transition-colors duration-300 hover:brightness-125 "> 
                     Solicitar reserva
                 </button>
 

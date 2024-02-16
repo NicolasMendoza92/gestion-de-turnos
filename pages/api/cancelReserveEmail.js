@@ -24,7 +24,7 @@ export default async function handler(req, res) {
                 <h4>Su cita para el: ${cita}</h4>
                 <h5 style="color:red;">Ya no esta disponible </h5>
                 <hr style="width:30%;text-align:left;margin-left:0" >
-                <p>Para solicitar otra cita visite <a href="http://localhost:3000/"> nuestra web </a></p>
+                <p>Para solicitar otra cita visite <a href="https://appointment-management.vercel.app/"> nuestra web </a></p>
                 <p>Si tiene alguna duda envianos un <a href="https://wa.me/c/34644053023">WhatsApp</a></p>
                 <p> Disculpe las molestias ocacionadas </p>
                 `

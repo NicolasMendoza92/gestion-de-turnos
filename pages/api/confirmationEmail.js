@@ -31,7 +31,7 @@ export default async function handler(req, res) {
                 <p> Solicitada el: ${solicitado} </p>
                 <p style="color:red;> Atención:</p><p>La cita no puede ser modificada, si desea hacerlo, debera cancelarla y solicitar otra</p>
                 <hr style="width:30%;text-align:left;margin-left:0" >
-                <p>Si por algún motivo no podrá asistir por favor  <a href="http://localhost:3000/cancel/reserve/${reservefind._id}">Cancelar la Cita</a></p>
+                <p>Si por algún motivo no podrá asistir por favor  <a href="https://appointment-management.vercel.app/cancel/reserve/${reservefind._id}">Cancelar la Cita</a></p>
                 <p>Si tiene alguna duda envianos un <a href="https://wa.me/c/34644053023">WhatsApp</a></p>
                 <p> Gracias por confiar en nosotros </p>
                 `

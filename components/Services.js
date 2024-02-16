@@ -21,12 +21,12 @@ export default function Services() {
           />
           <Service
             image='/icons/pelo.png'
-            title='Estilo personalizado'
+            title='Estilo'
             description=' Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur, odio.'
           />
           <Service
             image='/icons/afeitar.png'
-            title='Maximo detalle'
+            title='Detalle'
             description=' Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur, odio.'
           />
           <Service

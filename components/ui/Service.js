@@ -3,7 +3,7 @@ import Image from 'next/image';
 // creamos a las propiedades de Service como un ReactComponent y le pasamos los parametros siempre
 const Service = ({ image, title, description }) => {
   return (
-    <div className='space-y-5 flex flex-col items-center'>
+    <div className='space-y-5 p-3 rounded-md flex flex-col items-center duration-300 hover:bg-gray-200'>
       <div className='relative w-20 h-20'>
         <Image src={image} alt='Image' fill className='object-cover' sizes='max' />
       </div>
