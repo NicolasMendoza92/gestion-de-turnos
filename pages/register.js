@@ -8,7 +8,6 @@ export default function Register() {
   const { data: session } = useSession();
   return (
     <div>
-      {/* password: Admin*2024 */}
       {session?.user.email === 'admin@gmail.com' ? (
         <>
           <NavbarAdmin />
