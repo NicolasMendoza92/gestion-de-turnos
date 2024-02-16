@@ -65,7 +65,7 @@ export const TableReserves = () => {
 
         Swal.fire({
             title: "¿Esta seguro de eliminar esa reserva?",
-            text: "Eliminar la reserva no indica al cliente que ya no esta disponible, para eso debera cancelar reserva",
+            text: "Eliminar la reserva no advertira al cliente que su cita ya no esta disponible, para advertirle, debera 'cancelar' reserva",
             showDenyButton: true,
             confirmButtonText: "Borrar",
             denyButtonText: `No borrar`,
