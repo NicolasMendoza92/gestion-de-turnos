@@ -60,28 +60,58 @@ export const TableReserves = () => {
         // Busco los eventos generados 
         const result = await axios.get('/api/events');
         const eventos = result?.data.events;
-        // traigo el id del evento relacionado a la reserva
-        const eventId = (eventos?.find((ev) => ev.reserve === _id))._id
+        if(eventos.length > 0){
+            const eventId = (eventos?.find((ev) => ev.reserve === _id))._id
 
-        Swal.fire({
-            title: "¿Esta seguro de eliminar esa reserva?",
-            text: "Eliminar la reserva no advertira al cliente que su cita ya no esta disponible, para advertirle, debera 'cancelar' reserva",
-            showDenyButton: true,
-            confirmButtonText: "Borrar",
-            denyButtonText: `No borrar`,
-            confirmButtonColor: "#d33",
-            denyButtonColor: "#3085d6",
-        }).then(async result => {
-            if (result.isConfirmed) {
-                // llamo a la funcion borrar reserva y le paso los parametros
-                deleteReserve({ _id, eventId })
-            } else if (result.isDenied) {
-                Swal.fire("La reserva continua ", "", "info");
-            }
-        });
+            Swal.fire({
+                title: "¿Esta seguro de eliminar esa reserva?",
+                text: "Eliminar la reserva no advertira al cliente que su cita ya no esta disponible, para advertirle, debera 'cancelar' reserva",
+                showDenyButton: true,
+                confirmButtonText: "Borrar",
+                denyButtonText: `No borrar`,
+                confirmButtonColor: "#d33",
+                denyButtonColor: "#3085d6",
+            }).then(async result => {
+                if (result.isConfirmed) {
+                    // llamo a la funcion borrar reserva y le paso los parametros
+                    deleteReserveAndEvent({ _id, eventId })
+                } else if (result.isDenied) {
+                    Swal.fire("La reserva continua ", "", "info");
+                }
+            });
+        } else{
+            Swal.fire({
+                title: "¿Esta seguro de eliminar esa reserva?",
+                text: "Eliminar la reserva no advertira al cliente que su cita ya no esta disponible, para advertirle, debera 'cancelar' reserva",
+                showDenyButton: true,
+                confirmButtonText: "Borrar",
+                denyButtonText: `No borrar`,
+                confirmButtonColor: "#d33",
+                denyButtonColor: "#3085d6",
+            }).then(async result => {
+                if (result.isConfirmed) {
+                    // llamo a la funcion borrar reserva y le paso los parametros
+                    deleteReserve({ _id})
+                } else if (result.isDenied) {
+                    Swal.fire("La reserva continua ", "", "info");
+                }
+            });
+        }
+
     }
 
-    async function deleteReserve({ _id, eventId }) {
+    async function deleteReserve({ _id}) {
+
+        try {
+            await axios.delete('/api/reserves?id=' + _id);
+            Swal.fire("Borrado!", "", "success");
+            getAllReserves();
+        } catch (error) {
+            console.log(error);
+        }
+    }
+
+    async function deleteReserveAndEvent({ _id, eventId }) {
 
         try {
             await axios.delete('/api/reserves?id=' + _id);
