@@ -16,10 +16,10 @@ export default function MainBanner() {
                 <div>
                     <div className='absolute bg-gradient-to-tr from-black to-transparent left-0 top-0 w-full h-full' />
                     <div className='absolute top-1/2 -translate-y-1/2 left-1/2 lg:left-60 -translate-x-1/2 lg:translate-x-0 space-y-10'>
-                        <h1 className='text-white text-6xl lg:text-9xl font-semibold text-center lg:text-left'>
+                        <h1 className='text-white text-6xl lg:text-9xl font-semibold lg:text-left'>
                             Tu look <br /> Tu estilo
                         </h1>
-                        <p className='text-center text-gray-500 text-2xl  md:text-gray-500 text-2xl text-start'>
+                        <p className='text-center text-white text-2xl  md:text-white text-2xl text-start'>
                             No hay hombres feos, <br /> solo hombres que no conocen un buen barbero.
                         </p>
                         <div className='flex flex-col sm:flex-row items-center gap-5'>
