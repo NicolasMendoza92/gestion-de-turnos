@@ -142,7 +142,7 @@ export default function ReservaForm() {
                     className="rounded-md"
                     type="text"
                     maxLength={80}
-                    placeholder="Lio Messi"
+                    placeholder="Lionel Messi"
                     onChange={(e) => setFullName(e.target.value)} />
 
                 <label className='text-xl text-white'>Correo electronico</label>
