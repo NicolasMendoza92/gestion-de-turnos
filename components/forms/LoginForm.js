@@ -58,7 +58,7 @@ export default function LoginForm() {
                     <input
                         onChange={(e) => setEmail(e.target.value)}
                         type="text"
-                        placeholder="Email"
+                        placeholder="newuser@mail.com"
                     />
                     <div className="flex inline-flex items-center">
                         <input
