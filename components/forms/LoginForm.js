@@ -60,7 +60,7 @@ export default function LoginForm() {
                         type="text"
                         placeholder="newuser@mail.com"
                     />
-                    <div className="flex inline-flex items-center">
+                    <div className="flex items-center">
                         <input
                             onChange={(e) => setPassword(e.target.value)}
                             type="password"
@@ -73,6 +73,9 @@ export default function LoginForm() {
                     <button className="bg-primary text-white font-bold cursor-pointer px-6 py-2">
                         Login
                     </button>
+                    <span>
+                        Login as <b>user:</b>admin@gmail.com <b>password:</b> Admin*2024
+                    </span>
 
                     {error && (
                         <div className="bg-red-500 text-white w-fit text-sm py-1 px-3 rounded-md mt-2">
